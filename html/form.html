@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Form</title>
+		<meta charset="utf-8">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	</head>
+	
+	<body>
+	<h1>Форма с личными данными</h1>
+	<form action="_mila_@ua.fm" method="post">
+		<label> Имя </br>
+			<input type="text" name="name"></input>
+		</label> </br> </br>
+		<label> Фамилия </br>
+			<input type="text" name="surename"></input>
+		</label>  </br>  </br>
+		<label> Дата рождения </br> 
+			<input type="date" name="date_birth"></input>
+		</label> </br> </br>
+		<label> Страна происхождения </br> 
+			<select name="country[]" multiple size="4">
+					<option>Республика Молдова</option>
+					<option>Румыния</option>
+					<option>Украина</option>
+			</select>
+		</label> </br> </br>
+		<label> Интересы </br> 
+			<input type="checkbox" name="hobbies" value="html" checked>HTML</input><br>
+			<input type="checkbox" name="hobbies" value="css" checked>CSS</input><br>
+			<input type="checkbox" name="hobbies" value="JavaScript"checked>JavaScript</input><br>
+			<input type="checkbox" name="hobbies" value="php">PHP</input>
+		</label> </br> </br>
+		<label> Логин </br>
+			<input type="text" name="login"></input>
+		</label> </br> </br>
+		<label> Пароль </br>
+			<input type="password" name="password"></input>
+		</label> </br> </br>
+		<label>Как часто вы хотите получать уведомления на электронную почту</br>
+			<input type="radio" name="notifications" value="weekly">1. Еженедельно</input><br>
+			<input type="radio" name="notifications" value="monthly" checked>2. Ежемесячно</input><br>
+			<input type="radio" name="notifications" value="never">3. Никогда</input>
+		</label> </br> </br>
+		<label> Оставьте комментарий </br>
+			<textarea rows="8" cols="50" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
+		</label>  </br>  </br>
+		<input type="submit" value="Подтвердить"></input>	
+	</form>	
+	</body>
+</html>
