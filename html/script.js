@@ -1,10 +1,15 @@
 var popup = document.querySelector('.popup');
 var openPopupButton = document.querySelector('.popup--open');
+var cardButtonHide = document.querySelector('.button-hide');
 
 
 openPopupButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.add('popup--open')
+});
+
+cardButtonHide.addEventListener('click', function () {
+  popup.classList.remove('popup--open');
 });
 
 document.addEventListener('keydown', function (evt) {
