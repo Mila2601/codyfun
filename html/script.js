@@ -17,3 +17,10 @@ document.addEventListener('keydown', function (evt) {
    popup.classList.remove('popup--open')
   }  
 });
+
+document.getElementById("demo").innerHTML="Знания создают ваше будущее!";
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.font="25px Arial";
+ctx.fillText("Hello world!",75,45);
