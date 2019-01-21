@@ -4,7 +4,7 @@ h1 {
 }
 
 p {
-	font-size: 16px;
+	font-size: 1em;
 	text-align: justify;
 }
 
@@ -44,7 +44,8 @@ span {
 }
 
 img {
-	width:100%;
+	max-width: 100%;
+	height: auto;
 }
 
 audio,
