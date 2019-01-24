@@ -8,14 +8,12 @@
 		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	</head>
 	
-	<body class="bg">
+	<body>
 	<div class="container"> 	
-		<div class="logo-bg">
-		<h1 class="verticalMiddle logoText"> Codifun Inspire Me !</h1>
-		</div>
+
 	<form action="_mila_@ua.fm" method="post">
 		<h1 class="article-title">Форма с личными данными</h1>
-		<div class="clearfix">
+		<div class="row">
 			<div class="left">
 				<label> Имя </br>
 					<input type="text" name="name"></input>
@@ -45,21 +43,30 @@
 				</label> </br> </br>
 			</div>
 		</div>
-		<span>Как часто вы хотите получать уведомления на электронную почту</span>
-			<input type="radio" name="notifications" value="weekly">1. Еженедельно</input><br>
-			<input type="radio" name="notifications" value="monthly" checked>2. Ежемесячно</input><br>
-			<input type="radio" name="notifications" value="never">3. Никогда</input>
-		</br> </br>
-		<span>Интересы </span>
-			<input type="checkbox" name="hobbies" value="html" checked>HTML</input><br>
-			<input type="checkbox" name="hobbies" value="css" checked>CSS</input><br>
-			<input type="checkbox" name="hobbies" value="JavaScript"checked>JavaScript</input><br>
-			<input type="checkbox" name="hobbies" value="php">PHP</input>
-		</br> </br>
-		<label> Оставьте комментарий </br>
-			<textarea rows="8" cols="50" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
-		</label>  </br>  </br>
-		<input type="submit" value="Подтвердить"></input>	
+		<div class="row">
+			<div class="column dos-columnos">
+				<span>Как часто вы хотите получать уведомления на электронную почту</span>
+				<input type="radio" name="notifications" value="weekly">1. Еженедельно</input><br>
+				<input type="radio" name="notifications" value="monthly" checked>2. Ежемесячно</input><br>
+				<input type="radio" name="notifications" value="never">3. Никогда</input>
+				</br> </br>
+				<span>Интересы </span>
+				<input type="checkbox" name="hobbies" value="html" checked>HTML</input><br>
+				<input type="checkbox" name="hobbies" value="css" checked>CSS</input><br>
+				<input type="checkbox" name="hobbies" value="JavaScript"checked>JavaScript</input><br>
+				<input type="checkbox" name="hobbies" value="php">PHP</input>
+				</br> </br>
+			</div>
+		
+			<div class="column dos-columnos">
+				<label> Оставьте комментарий </br>
+					<textarea rows="12" cols="47" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
+				</label>  </br>  </br>
+			</div>
+		</div>
+		<div align="center">
+			<input type="submit" value="Подтвердить"></input>	
+		</div>
 	</form>	
 	</div>
 	</body>
