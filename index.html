@@ -28,16 +28,16 @@
 			<div class="row">
 				<div class="column">
 					<h2 class="article-title">Заголовок Статья</h2>
-					<img class="round" src="images/articol-1.png">
+					<img class="round" alt="значек блокнот с ручкой бирюзового цвета" src="images/articol-1.png">
 					<h6> Author: First name Last Name</h6>
 					<p><span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</span></p>
-					<audio src="audio/audio.mp3" controls autoplay"><p>Аудио не воспроизводится вашим браузером</p></audio>
+					<audio src="audio/audio.mp3" controls><p>Аудио не воспроизводится вашим браузером</p></audio>
 				</div>
 				
 				<div class="column">
 					<h2 class="article-title">Заголовок Статья</h2>
-					<img class="round" src="images/articol-2.png">
+					<img class="round"  alt="значек блокнот с ручкой синего цвета" src="images/articol-2.png">
 					<h6> Author: First name Last Name</h6>
 					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
@@ -46,7 +46,7 @@
 
 				<div class="column">
 					<h2 class="article-title">Заголовок Статья</h2>
-					<img class="round" src="images/articol-3.png">
+					<img class="round"  alt="значек блокнот с ручкой зеленого цвета" src="images/articol-3.png">
 					<h6> Author: First name Last Name</h6>
 					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
@@ -69,54 +69,54 @@
 			</div>
 			<div class="row">
 				<div class="left pop-margins">
-					<label> Имя </br>
-						<input type="text" name="name"></input>
-					</label> </br> </br>
-					<label> Фамилия </br>
-						<input type="text" name="surename"></input>
-					</label>  </br>  </br>
+					<label> Имя <br>
+						<input type="text" name="name">
+					</label> <br> <br>
+					<label> Фамилия <br>
+						<input type="text" name="surename">
+					</label>  <br>  <br>
 				</div>
 				<div class="left pop-margins">
-					<label> Дата рождения </br> 
-						<input type="date" name="date_birth"></input>
-					</label> </br> </br>
-					<label> Страна происхождения </br> 
+					<label> Дата рождения <br> 
+						<input type="date" name="date_birth">
+					</label> <br> <br>
+					<label> Страна происхождения <br> 
 						<select name="country[]" multiple size="4">
 								<option>Республика Молдова</option>
 								<option>Румыния</option>
 								<option>Украина</option>
 						</select>
-					</label> </br> </br>
+					</label> <br> <br>
 				</div>
 				<div class="left pop-margins">
-					<label> Логин </br>
-						<input type="text" name="login"></input>
-					</label> </br> </br>
-					<label> Пароль </br>
-						<input type="password" name="password"></input>
-					</label> </br> </br>
+					<label> Логин <br>
+						<input type="text" name="login">
+					</label> <br> <br>
+					<label> Пароль <br>
+						<input type="password" name="password">
+					</label> <br> <br>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column dos-columnos">
 					<span>Как часто вы хотите получать уведомления на электронную почту</span>
-					<input type="radio" name="notifications" value="weekly">1. Еженедельно</input><br>
-					<input type="radio" name="notifications" value="monthly" checked>2. Ежемесячно</input><br>
-					<input type="radio" name="notifications" value="never">3. Никогда</input>
+					<input type="radio" name="notifications" value="weekly">1. Еженедельно<br>
+					<input type="radio" name="notifications" value="monthly" checked>2. Ежемесячно<br>
+					<input type="radio" name="notifications" value="never">3. Никогда
 				</div>
 				
 				<div class="column dos-columnos">
 					<span>Интересы </span>
-					<input type="checkbox" name="hobbies" value="html" checked>HTML</input><br>
-					<input type="checkbox" name="hobbies" value="css" checked>CSS</input><br>
-					<input type="checkbox" name="hobbies" value="JavaScript"checked>JavaScript</input><br>
-					<input type="checkbox" name="hobbies" value="php">PHP</input>
+					<input type="checkbox" name="hobbies" value="html" checked>HTML<br>
+					<input type="checkbox" name="hobbies" value="css" checked>CSS<br>
+					<input type="checkbox" name="hobbies" value="JavaScript" checked>JavaScript<br>
+					<input type="checkbox" name="hobbies" value="php">PHP
 				</div>
 			</div>
-			<label> Оставьте комментарий </br>
+			<label> Оставьте комментарий <br>
 				<textarea rows="4" cols="72" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
-			</label>  </br>  </br>
-			<div align="center"><input type="submit" value="Подтвердить"></input></div>
+			</label>  <br>  <br>
+			<div align="center"><input type="submit" value="Подтвердить"></div>
 			<button class="popup__button button-hide" type="button">Закрыть</button>
 		</div>
 	</form>	
