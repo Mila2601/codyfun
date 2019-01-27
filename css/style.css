@@ -140,6 +140,11 @@ canvas {
 			14px 14px yellow;
 }
 
+.blockInCenter {
+	width: 800px;
+	margin: 0 auto;
+}
+
 /*      Стили формы      */
 
 .left {
