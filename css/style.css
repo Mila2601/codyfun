@@ -204,7 +204,7 @@ input[type="submit"] {
 	font-weight: bold;
 	font-size: 20px;
 	min-height: 50px;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Pacifico', cursive, sans-serif;
 	text-transform: uppercase;
 }
 
@@ -286,12 +286,6 @@ form span {
   z-index: 2;
 }
 
-@media screen and (max-width: 800px) {
-	.popup-content {
-		width: 100%;
-	}
-}
-
 .popup:after {
   content: "";
   position: fixed;
@@ -301,4 +295,24 @@ form span {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+	.popup {
+		width: 100%;
+	}
+	
+	.popup-content, textarea {
+		width: 97%;
+	}
+	
+	input[type="text"], input[type="password"] { 
+		width: 180%;
+		min-height: 35px;
+	}
+	
+	input[type="date"], select {
+		width: 175%;
+		min-height: 35px;
+	}	
 }
