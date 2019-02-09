@@ -19,6 +19,7 @@ document.addEventListener('keydown', function (evt) {
 });
 
 document.getElementById("demo").innerHTML="&copy Знания создают ваше будущее!";
+
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 

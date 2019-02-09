@@ -1,0 +1,139 @@
+body {
+	background: #fcfcfc;
+}
+
+.formContainer {
+	width: 680px;
+	min-height: 816px;
+	box-shadow: 1px 1px 20px rgba(0,0,0,0.2),
+				-1px -1px 20px rgba(0,0,0,0.2);
+	margin: 40px auto;	
+	border-collapse: collapse;
+	padding: 47px 30px;
+	background: white;
+}
+
+section {
+	padding: 10px 20px 10px 4px;
+}
+
+.formLeftSide {
+	display: table-cell;
+	width: 290px;
+	min-height: 450px;
+	box-shadow: -2px -2px 2px 1px #cfcfcf,
+				2px 2px 2px 2px #cfcfcf;
+	background-image: url('../images/light-bg.jpg');
+	border-radius: 20px 0 0 20px;
+	padding-left: 20px;
+	padding-right: 25px;
+}
+
+.formRightSide {
+	display: table-cell;
+	min-height: 450px;
+}
+.formRightSide div {
+	box-shadow: 2px -2px 2px #cfcfcf,
+				2px 2px 2px #cfcfcf;
+	border-radius: 0 20px 20px 0;
+	background-color: #efefef;
+	vertical-align: middle;
+	min-height: 430px;
+	padding: 20px;
+	margin-left: 0;
+}
+
+section label, section span {
+	font-family: Georgia, serif;
+	font-size: 1em;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.formRightSide textarea {
+	margin-top: 10px;
+}
+
+.formLeftSide input, .formLeftSide select {
+	margin-top: 7px;
+}
+
+input[type="date"], select {
+	width: 185px;
+	min-height: 29px;
+}
+
+h1 .form-title {
+	font-size: 26px;
+}
+
+input[type="submit"] {
+	font-family: Arial, sans-serif;
+	color: transparent;
+	background: #666666;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+	margin-top: 46px;
+}
+
+input[type="submit"]:hover {
+	color: #d9d9d9;
+	background: #e8e8e8;
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+	color: #d9d9d9;
+	background: #e8e8e8;
+}
+
+input[type="submit"]:active {
+	color: #d9d9d9;
+	background: rgb(0,0,255);
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+	color: #d9d9d9;
+	background: #99ccff;
+}
+
+@media screen and (max-width:800px) {
+	.formContainer {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.formLeftSide, .formRightSide {
+		float: left;
+		width: 100%;
+		border-radius: 0;
+		background: #efefef;
+		box-shadow: -2px -2px 2px 1px #cfcfcf,
+					2px 2px 2px 2px #cfcfcf;
+		padding-left: 20px;
+	}
+	
+	.formLeftSide {
+		background-image: url('../images/light-bg.jpg');
+		padding-top: 40px;
+		padding-bottom: 30px;
+		border-radius: 20px 20px 0 0;
+	}
+	
+	.formRightSide {
+		border-radius: 0 0 20px 20px;
+	}
+	
+	.formRightSide div {
+		border-radius: 0;
+		box-shadow: none;
+		text-align: left;
+	}
+	
+	.formLeftSide input, select {
+		width: 100%;
+		min-height: 40px;
+	}
+	
+	.formRightSide textarea {
+		width: 100%;
+	}
+}
