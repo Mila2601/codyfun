@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title>Интересные факты</title>
+		<title>Form2</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
 		<link href="../css/style.css" rel="stylesheet" type="text/css">
@@ -9,8 +9,7 @@
 		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	</head>
 	
-	<body class="bg">
-	 <div  class="grid">
+	<body>
 	
 		<header>
 			<h1 class="verticalMiddle logoText"> Codifun Inspire Me !</h1>
@@ -23,55 +22,10 @@
 			<a title="вы не можете с нами связаться"  href="contacts.html">Контакты</a>
 			<a title="карта расположения коворкинга IHUB" href="address.html">Карта</a>
 			<a class="popup--open" title="форма" target="_blank" href="form.html">Заполните форму</a>
-		</nav>	
-
-		<aside>
-			<nav>
-				<ul>
-					<li><a title="факты о CSS" href="#">CSS</a></li>
-					<li><a title="факты о HTML"  href="#">HTML</a></li>
-					<li><a title="факты о JS" href="#">JavaScript</a></li>
-					<li><a title="факты о SVG" href="#"> SVG</a></li>
-				</ul>
-			</nav>	
-		</aside>
+		</nav>		
 		
-		<section>
-			<article>
-				<h2>float</h2>
-				<img src="https://internetingishard.com/html-and-css/floats/methods-for-clearing-floats-6429d9.png">
-				<button><a href="#" title="description">description</a></button>
-			</article>
-			
-			<article>
-				<h2>flex</h2>
-				<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg">
-				<button><a href="#" title="description">description</a></button>
-			</article>
-			
-			<article>
-				<h2>grid</h2>
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIPu3WSvgxu-83C0KSQZWDtFzlpnDQ7jWbqOnTQgV6_IlRm2CUA">
-				<button><a href="#" title="description">description</a></button>
-			</article>
-			
-			<article>
-			</article>
-			
-			<article>
-			</article>
-			
-			<article>
-			</article> 
-		</section>
-		
-		<footer>
-			<q>Знания создают ваше будущее!</q>		
-		</footer>
-		
-	  </div>
-	  <div class="popup">
-			<form action="https://codifun-learn.000webhostapp.com" method="GET" class="popup-content">
+		<div class="formContainer">
+			<form action="https://codifun-learn.000webhostapp.com" method="GET">
 				<h1 class="form-title">Форма с личными данными &#x2663</h1>
 				<div class="canvas" align="center">
 					<canvas width="300" height="80" id="myCanvas">Ваш браузер не поддерживает елемент типа Canvas</canvas>
@@ -118,7 +72,7 @@
 						<input type="checkbox" name="hobbies" value="php">PHP</input>
 						</br> </br>					
 						<label> Оставьте комментарий </br>
-							<textarea rows="12" cols="38" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
+							<textarea rows="12" cols="40" name="comment">Оставьте свой комментарий. Нам важно знать ваше мнение.</textarea>
 						</label>  </br>  </br>
 					</div>
 				</section>
@@ -126,11 +80,8 @@
 						<div align="center">
 							<input type="submit" value="Подтвердить"></input>	
 						</div>
-						<button class="popup__button button-hide" type="button">Закрыть</button>
 			</form>	
 		 </div> 
 		 <script src="../js/script.js"></script>
-	</body>
-</html>
 	</body>
 </html>
