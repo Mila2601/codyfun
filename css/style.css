@@ -68,6 +68,9 @@ nav {
 	flex-wrap: wrap;
 	overflow: hidden;
 	background-color: rgb(34, 33, 33);
+	box-shadow: 0 2px 12px #555;
+	position: sticky;
+	top: 0%;
 }
 
 nav a {
@@ -125,7 +128,7 @@ section {
 .line {
 	width: 100%;
 	height: 300px;
-	background: #b3ee91 url('../images/image.png') no-repeat fixed center 80%;
+	background: #b3ee91 url('../images/derevo.png') no-repeat fixed center 80%;
 	background-size: contain;
 }
 
@@ -174,6 +177,28 @@ canvas {
 	padding: 0;
 	border: #5f5f5f solid 10px;
 }
+
+.section-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image:
+    linear-gradient(45deg, #999 25%, transparent 25%),
+    linear-gradient(-45deg, #999 25%, transparent 25%),
+    linear-gradient(135deg, #999 25%, transparent 25%),
+    linear-gradient(-135deg, #999 25%, transparent 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  line-height: 2em;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #333;
+}
+
 
 /*      Стили формы      */
 form {
@@ -312,17 +337,17 @@ form span {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
- 
+
    /* стили на странице с фактами*/
    
 .grid {
 	display: grid;
-	grid-template-areas: "header header header header"
-						 "nav nav nav nav"
-						 "aside section section section"
-						 "footer footer footer footer";
+	grid-template-areas: "header header"
+						 "nav nav"
+						 "aside section"
+						 "footer footer";
 						 
-	grid-template-columns: 15%;
+	grid-template-columns: 250px 1fr;
 }
 
 .grid header {
@@ -348,6 +373,9 @@ form span {
 
 .grid aside nav {
 	background-color: #eeecec;
+	box-shadow: 0 1px 2px #555;
+	position: sticky;
+	top: 43px;
 }
 
 .grid nav ul {
@@ -359,9 +387,40 @@ form span {
 
 .grid nav li {
 	list-style: none;
-	padding: 14px 26px;
+	padding: 14px 36px;
 	text-decoration: none;
 	font: bold 13px Georgia, serif;
+}
+
+.grid nav li a:before {
+	background-image: url('../images/sprite.jpg');
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	content: "";
+	left: 20px;
+}
+
+.grid nav li:hover a:before {
+	transform: translateY(-5px) scale(1.2);
+	transition-duration: 1s;
+}
+
+.grid nav li:first-child a:before {
+	background-position: 0 -18px;
+}
+
+.grid nav li:nth-child(2) a:before {
+	background-position: 0 0;
+}
+
+.grid nav li:nth-child(3) a:before {
+	left: 20px;
+	background-position: 0 -36px;
+}
+
+.grid nav li:last-child a:before {
+	background-position: 0 -54px;
 }
 
 .grid nav li a {
@@ -385,26 +444,28 @@ form span {
 	border: 1px solid grey;
 	width: 30%;
 	min-width: 300px;
-	min-height: 262px;
-	margin: 10px 0 20px 10px;
+	min-height: 250px;
+	margin: 10px 0 10px 10px;
 }
 
 .grid article h2 {
 	text-transform: uppercase;
 }
 
-.grid article button {
-	width: 270px;
-	margin: 5px auto;
-}
-
-.grid article button a {
+.grid article a button {
+	width: 270px;	
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
+.grid article a {
+	margin: 5px auto;
+}
+
 .grid article img {
-	min-height: 140px;
+	height: 140px;
+	width: 300px;
+	margin: auto;
 }
 
 @media screen and (max-width: 600px) {
