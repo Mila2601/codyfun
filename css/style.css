@@ -373,7 +373,7 @@ form span {
 
 .grid aside nav {
 	background-color: #eeecec;
-	box-shadow: 0 1px 2px #555;
+	box-shadow: -2px 1px 2px #555;
 	position: sticky;
 	top: 43px;
 }
@@ -479,8 +479,13 @@ form span {
 		grid-template-columns: 1fr;
 	}
 	
-	.grid article {
+	.grid article,
+	.svg-image {
 		width: 95%;
+	}
+	
+	.column {
+		padding: 0;
 	}
 }
   
