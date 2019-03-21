@@ -1,4 +1,6 @@
-        /* Общие стили */
+
+		
+		/* Общие стили */
 body {
 	margin: 0;
 	padding: 0;
@@ -467,6 +469,58 @@ form span {
 	width: 300px;
 	margin: auto;
 }
+
+/* Челендж */
+
+main {
+	background: #ccc;
+	padding: 30px;
+}
+
+
+.challenge:hover {
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5),
+				-1px -1px 20px rgba(0, 0, 0, 0.5);
+	filter: none;
+}
+
+.challenge {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	margin: 0 auto;
+	background: white;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5),
+				-1px -1px 10px rgba(0, 0, 0, 0.5);
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+	font-size: 0.8em;
+	filter: grayscale(1);
+}
+
+.challenge h2 {
+	color: black;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	padding: 10px 10px 0;
+	margin: 0;
+}
+
+.challenge time {
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+.challenge p {
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+}
+
+
 
 @media screen and (max-width: 600px) {
 	.grid {

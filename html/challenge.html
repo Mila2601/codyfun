@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title> Codifun	</title>
+		<title> Challenge	</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -19,44 +20,22 @@
 				  
 		<nav>
 			<a href="index.html">Главная страница</a>
-			<a title="интересные факты ни о чем" href="html/facts.html">Интересные факты</a>
-			<a title="вы не можете с нами связаться" href="html/contacts.html">Контакты</a>
-			<a title="карта расположения коворкинга IHUB" href="html/address.html">Карта</a>
-			<a title="задание от Вадима" href="html/challenge.html">Челендж</a>
-			<a class="popup--open" title="форма" href="html/form.html">Заполните форму</a>
+			<a title="интересные факты ни о чем" href="facts.html">Интересные факты</a>
+			<a title="вы не можете с нами связаться" href="contacts.html">Контакты</a>
+			<a title="карта расположения коворкинга IHUB" href="address.html">Карта</a>
+			<a title="задание от Вадима" href="challenge.html">Челендж</a>
+			<a class="popup--open" title="форма" href="form.html">Заполните форму</a>
 		</nav>		
 		
-		<section>
-			<div class="row">
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 1</h2>
-					<img class="round" alt="значек блокнот с ручкой бирюзового цвета" src="images/articol-1.png">
-					<h6> Author: First name Last Name</h6>
-					<p><span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</span></p>
-					<audio src="audio/audio.mp3" controls><p>Аудио не воспроизводится вашим браузером</p></audio>
-				</div>
-				
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 2</h2>
-					<img class="round"  alt="значек блокнот с ручкой синего цвета" src="images/articol-2.png">
-					<h6> Author: First name Last Name</h6>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
-					<video src="video/video.mp4" poster="images/articol-2.png" controls><p>Видео не воспроизводится вашим браузером</p></video>
-				</div>
-
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 3</h2>
-					<img class="round"  alt="значек блокнот с ручкой зеленого цвета" src="images/articol-3.png">
-					<h6> Author: First name Last Name</h6>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
-					<video src="video/video.mp4" autoplay loop muted><p>Видео не воспроизводится вашим браузером</p></video>
-				</div>
-			</div>
-		</section>
-		<div class="line"></div>
+		<main>
+			<article class="challenge">
+				<img src="../images/oranges.jpg" alt="апельсины">
+				<time datetime="2019-03-21">21 марта 2019</time>
+				<h2>Lorem Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor eget massa sit amet pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent egestas elementum neque a varius.</p>				
+			</article>
+		</main>
+		
 		
 		<footer>
 			<h3 id="demo"></h3>	
@@ -123,6 +102,6 @@
 			<button class="popup__button button-hide" type="button">Закрыть</button>
 		</div>
 	</form>	
-	<script src="js/script.js"></script>
+	<script src="../js/script.js"></script>
 	</body>
 </html>
