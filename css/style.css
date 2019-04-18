@@ -177,7 +177,12 @@ canvas {
 
 .map {
 	padding: 0;
-	border: #5f5f5f solid 10px;
+	border: #5f5f5f solid 10px;	
+}
+
+.map iframe {
+	width: 800px;
+	height: 600px;
 }
 
 .section-header {
@@ -473,7 +478,7 @@ form span {
 /* Челендж */
 
 main {
-	background: #ccc;
+	background: #f5f5f5;
 	padding: 30px;
 }
 
@@ -490,6 +495,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	width: 300px;
+	height: 377px;
 	margin: 0 auto;
 	background: white;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5),
@@ -520,9 +526,367 @@ main {
 	margin: 0;
 }
 
-
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
 
 @media screen and (max-width: 600px) {
+	 .goods {
+		 width: 100%;
+	 }
+}
+
+.good {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 360px;
+  margin-bottom: 35px;
+  padding: 15px 10px;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+.good:hover {
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.good--available:before,
+.good--unavailable:before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+
+  display: inline-block;
+  padding: 5px 8px;
+
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: top;
+  text-align: center;
+  color: #ffffff;
+
+  background-image: linear-gradient(#e74a35 0%, #f26843 100%);
+  border: none;
+  border-radius: 5px;
+}
+
+.good--hit {
+  width: 40%;
+  order: -1;
+
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.good--hit::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+
+  width: 61px;
+  height: 61px;
+  margin: auto;
+
+  background-image: url("../images/hit.svg");
+  background-repeat: no-repeat;
+}
+
+.good--unavailable {
+  filter: grayscale(1) opacity(0.8);
+}
+
+.good--unavailable:before {
+  content: "Нет в наличии";
+}
+
+.good--available:before {
+  content: "В наличии";
+}
+
+.good__price {
+  position: absolute;
+  top: 180px;
+  left: 55%;
+
+  width: 270px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-shadow: 0.5px 0.866px 3px rgba(49, 50, 53, 1);
+
+  transform: translateX(-140px);
+}
+
+.good__description {
+  order: 1;
+  max-width: 220px;
+  margin: 8px 11px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #ff5500;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+.good__image {
+  padding: 10px;
+  border-radius: 50%;
+  background-image: url(../images/lollipop.svg);
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: -45px -45px;
+}
+
+.good__special-offer {
+  position: relative;
+  order: 2;
+
+  max-width: 190px;
+  margin: 5px 11px;
+  padding-left: 5px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+
+  color: rgba(100, 255, 0, 1);
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+  /*text-shadow: 0px 0px 10px rgba(49, 50, 53, 0.5);*/
+}
+
+.good__special-offer:before {
+  position: absolute;
+  content: "*";
+  top: 0;
+  left: 0;
+}
+
+
+/* конец стилей челенджа */
+
+.tiger {
+	background-image: url('../images/tiger-calm.jpg');
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 210px; 
+}
+
+.tiger--angry {
+	background-image: url('../images/tiger-angry.jpg');
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+#noseOfTiger {
+	width: 350px;
+	margin: auto;
+}
+
+#noseOfTiger p {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#noseOfTiger p:first-child {
+	padding: 10px 0;
+	font-weight: bold;
+	line-height: 1.5em;
+	background-color: rgba(0, 50, 255, 0.1);
+	border: 2px solid lightgrey;
+	border-radius: 15px;
+}
+#noseOfTiger div {
+	margin: auto;
+}
+
+.tiger_bg {
+	background: #ccc;
+	padding: 20px;
+}
+
+.game {
+	position: fixed;
+	width: 350px;
+	height: 300px;
+	background: yellow;
+	top: 200px;
+	left: -300px;
+	border-radius: 20px;
+	border: 2px dotted red;
+	transition: left .2s;
+	z-index: 2;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+}
+
+.btn-game {
+	position: fixed;
+	top: 330px;
+	left: -110px;
+	font-size: 16px;
+	-moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg); /* для IE9 */
+    transform: rotate(90deg); /* на будущее */
+	color: red;
+	letter-spacing: 4px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	z-index: 3
+}
+
+/*скрываем инпут чекбокс*/
+.hidden-game-ticker {
+display: none;
+}
+
+.btn-game:hover {
+	text-shadow: 1px 1px rgba(255, 0 , 0, 0.5);
+}
+
+/*при нажатии на лейбл двигаем его*/
+.hidden-game-ticker:checked ~ .btn-game {
+	left: 210px;
+}
+
+/*и дальше стили меняющие лейбл, двигающие игровое поле по событию - нажатие на значек лебла*/
+.hidden-game-ticker:checked ~ .game {
+	left: 20px;
+}
+
+.btn-game span {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	top: 280px;
+	color: white;
+	font-size: 1em;
+	background-color: rgba(255, 0, 0, 0.2);
+	-moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg); 
+    transform: rotate(-90deg); 
+	border: 1px solid red;
+	border-radius: 50%;
+	padding-left: 3px;
+}
+
+.game-form {
+	padding: 20px 40px 10px 40px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.game-form .block, #nr, .buttonRestart {
+	width: 250px;
+}
+
+.number {
+	display: inline-block;
+	width: 100px;
+	margin: 0 10px;
+}
+
+.cv {
+	background-color: white;
+	font-size: 1.2em;
+}
+
+#introCV {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.skills {
+	width: 50%;
+	margin: auto;
+	font-size: 1.3em;
+}
+
+.skills dd {
+  margin: 0;
+  margin-bottom: 10px;
+  background-color: #e8e8e8;
+}
+
+.skills-level {
+  font-size: 1.3em;
+  text-align: center;
+  color: #ffffff;
+  background-color: #4470c4;
+}
+
+.skills-level-ok {
+  background-color: #47bb52;
+}
+
+.portfolio {
+	width: 50%;
+	margin: auto;
+}
+
+.portfolio ol {
+	padding: 0;
+}
+
+.portfolio ol li {
+	padding: 10px;
+	border: 1px solid grey;
+	border-bottom: none;
+	line-height: 2em;
+	list-style-position: inside;
+}
+
+.portfolio ol li:first-child {
+	border-radius: 25px 25px 0 0;
+}
+
+.portfolio ol li:last-child {
+	border-radius: 0% 0% 25px 25px;
+	border-bottom: 1px solid grey;
+}
+
+.portfolio ol li:nth-child(even) {
+	  background-color: #e8e8e8;
+}
+
+.my-photo {
+	width: 30%;
+	float: left;
+	border-radius: 50%;
+	border: 2px solid grey;
+	margin-right: 20px;
+}
+
+.social img {
+	width: 32px;
+	margin-left: 10px;
+	vertical-align: bottom;
+}
+
+@media screen and (max-width: 600px) {
+	
 	.grid {
 		grid-template-areas: "header"
 							 "nav"
@@ -541,21 +905,23 @@ main {
 	.column {
 		padding: 0;
 	}
-}
   
-
-
-@media screen and (max-width: 800px) {
-	.popup {
+	.popup,
+	.skills,
+	.portfolio,
+	.my-photo,
+	.blockInCenter,
+	.map iframe {
 		width: 100%;
+		margin-bottom: 10px;
 	}
 	
 	.popup-content, textarea {
 		width: 97%;
 	}
 	
-	input[type="text"], input[type="password"], input[type="date"], select { 
-		width: 130%;
+	.popup input[type="text"], input[type="password"], input[type="date"], select { 
+		width: 100%;
 		min-height: 45px;
 	}
 	
