@@ -18,6 +18,7 @@ document.addEventListener('keydown', function (evt) {
   }  
 });
 
+
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
@@ -110,7 +111,7 @@ var makeCard = function (product) {
   return card
 }
 
-var list = document.querySelector('ul');
+var list = document.querySelector('main ul');
 
 var renderCards = function (cardsData) {
   

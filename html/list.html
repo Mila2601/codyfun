@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Ваш список покупок</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>	
+		<script src="../js/list.js"></script>
+	</head>
+	
+	<body>
+	
+	<header>
+		<div class="logo-bg">
+		<h1 class="verticalMiddle logoText">Список покупок</h1>
+		</div>
+		<p><em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+	</header>
+				  
+	<nav>
+		<ul>
+			<li><a href="../index.html">Главная страница</a></li>
+			<li><a title="интересные факты ни о чем" href="facts.html">Интересные факты</a></li>
+			<li><a title="вы не можете с нами связаться" href="contacts.html">Контакты</a></li>
+			<li><a title="карта расположения коворкинга IHUB" href="address.html">Карта</a></li>
+			<li><a title="задание от Вадима" href="hallenge.html">Челендж</a>
+				<ul class="dropdown">
+					<li><a href="games.html">Игры</a></li>
+					<li><a href="list.html">Список покупок</a></li>
+				</ul></li>
+			<li><a class="popup--open" title="форма" href="form.html">Заполните форму</a></li>
+			<li><a title="мое резюме" href="CV.html">CV</a></li>
+		</ul>
+	</nav>	
+		
+	<div id="shoppingList">
+		<div class="overflowHidden">
+			<p>&#1421; &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604;
+			   &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421;
+			   &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666;
+			   &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165;
+			   &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;
+			   &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;&#9096;
+			   &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;&#9096;&#9784;
+			   &#1421; &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604;
+			   &#1421; &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604;
+			   &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421;
+			   &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666;
+			   &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165;
+			   &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;
+			   &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;&#9096;
+			   &#9743; &#9730; &#9734; &#9988; &#42341; &#42604; &#1421; &#6666; &#7165; &#9055;&#9096;&#9784;
+			   &#1421; &#6666; &#7165; &#9055; &#9096; &#9784; &#9743; &#9730; &#9734; &#9988; &#42341; &#42604;</p>
+
+			<div class="block-list">
+				<h2>Ваш список покупок</h2>
+				<div class="total">Ваши расходы составят: <span id="total"></span> грн</div>
+				<div id="table"></div>
+				<div id="form" class="frm">
+					<div class="frm_content">
+						<div class="input_form">
+							<input type="text" id="product" class="input_ell" placeholder="Название товара" autofocus onkeydown="setFocusNmbr(event)"/>
+							<input type="text" id="nmbr" class="input_ell" placeholder="Количество товара" onkeydown="setFocusPrice(event)"/>
+							<input type="text" id="price" class="input_ell" placeholder="Цена за единицу"/ onkeydown="clickButton(event)">
+						</div>
+						<button onclick="addItem()" class="btn_frm">Добавьте товар в список</button>
+						<p id="err"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		   
+		<footer>
+				<q>Знания создают ваше будущее!</q>	
+		</footer>	
+	</body>
+</html>
