@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Калькулятор</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<script src="../js/calc.js"></script>
+	</head>
+	
+	<body class="calc">
+		<main class="calc-field">
+			<form width="600" height="800" action="#" class="">
+				<div id="result">0</div>
+				<div class="buttons-field">
+					<button id="music" onclick="sound()">&#119136;</button>
+					<button id="percent" onclick="getPercent()">%</button>
+					<button id="plus-minus" onclick="getPlusMinus()">&#8723;</button>
+					<button id="del-last-sign" onclick="delLastSign()">&#9003;</button>	
+					<button id="C" onclick="getReset()">C</button>
+					
+					<button id="one" onclick="getOne()">1</button>
+					<button id="two" onclick="getTwo()">2</button>
+					<button id="three" onclick="getThree()">3</button>
+					<button id="plus" onclick="getPlus()">+</button>
+					
+					<button id="four" onclick="getFour()">4</button>
+					<button id="five" onclick="getFive()">5</button>
+					<button id="six" onclick="getSix()">6</button>
+					<button id="minus" onclick="getMinus()">-</button>
+					
+					<button id="seven" onclick="getSeven()">7</button>
+					<button id="eight" onclick="getEight()">8</button>
+					<button id="nine" onclick="getNine()">9</button>
+					<button id="multiple" onclick="getMultiple()">*</button>
+					
+					<button id="point" onclick="getPoint()">.</button>
+					<button id="zero" onclick="getZero()">0</button>
+					<button id="divide" onclick="getDivide()">/</button>
+					<button id="equal" onclick="getEqual()">=</button>
+				</div>
+				<div id="archiv">0</div>
+			</form>
+		</main>
+	</body>
+</html>
