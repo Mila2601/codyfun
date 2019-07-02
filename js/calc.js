@@ -115,35 +115,35 @@ function pressButtonPoint() {
 
 // Общая функция для знаков, рассчитывающая число, попадающее в архив + обнуление счетчика запятой
  function archivCalculation() {
+    number1 = document.getElementById('result').innerHTML;
+    number2 = document.getElementById('archiv').innerHTML;
+        
     if (sign === "+") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(document.getElementById('archiv').innerHTML) + 
-        parseFloat(document.getElementById('result').innerHTML);
+        document.getElementById('archiv').innerHTML = parseFloat(number2) + 
+        parseFloat(number1);        
     }
 
-     if (sign === "-") {
+    if (sign === "-") {
         document.getElementById('archiv').innerHTML = 
-        parseFloat(document.getElementById('archiv').innerHTML) - 
-        parseFloat(document.getElementById('result').innerHTML);
+        parseFloat(number2) - parseFloat(number1);
     }
 
     if (sign === "*") {
         document.getElementById('archiv').innerHTML = 
-        parseFloat(document.getElementById('archiv').innerHTML) * 
-        parseFloat((document.getElementById('result').innerHTML).slice(1));
+        parseFloat(number2) * parseFloat(number1);
     }
 
     if (sign === "/") {
         document.getElementById('archiv').innerHTML = 
-        parseFloat(document.getElementById('archiv').innerHTML) / 
-        parseFloat((document.getElementById('result').innerHTML).slice(1));
+        parseFloat(number2) / parseFloat(number1);
     }
 
     if (sign === "%") {
         document.getElementById('archiv').innerHTML = 
-        parseFloat(document.getElementById('archiv').innerHTML) / 
-        100 * parseFloat((document.getElementById('result').innerHTML).slice(1));
+        parseFloat(number2) / 
+        100 * parseFloat(number1);
     }
+    document.getElementById('result').innerHTML = "";
     countThree = 0;
 }
 
@@ -151,35 +151,30 @@ function pressButtonPoint() {
 function pressButtonPlus() {
     archivCalculation();
     sign = "+";
-    document.getElementById('result').innerHTML = '+';
 }
 
 // Нажатие кнопки "минус"
 function pressButtonMinus() {
     archivCalculation();
     sign = "-";
-    document.getElementById('result').innerHTML = '-';
 }
 
 // Нажатие кнопки "умножить"
 function pressButtonMultiple() { 
     archivCalculation();
     sign = "*";
-    document.getElementById('result').innerHTML = '*';
 }
 
 // Нажатие кнопки "разделить"
 function pressButtonDivide() {
     archivCalculation();
     sign = "/";
-    document.getElementById('result').innerHTML = '/';
 }
 
 // Нажатие кнопки "процент"
 function pressButtonPercent() {
     archivCalculation();
     sign = "%";
-    document.getElementById('result').innerHTML = '%';
 }
 
 // Нажатие кнопки "плюс/минус"
@@ -198,7 +193,8 @@ function pressButtonReset() {
 function pressButtonEqual() {
     archivCalculation();
     document.getElementById('result').innerHTML = document.getElementById('archiv').innerHTML;	
-    document.getElementById('archiv').innerHTML = '0';
+    document.getElementById('archiv').innerHTML = "0";
+    sign = "+";
 }
 
 
