@@ -1,24 +1,32 @@
-var a, countOne = 0, countTwo, countThree = 0, audio, note, fromId = 0, fromLength, 
-fromResult, sign = '+', num;
+var countOne = 0,
+    countThree = 0,
+    fromId = 0,
+    audio,
+    note,
+    num,
+    fromLength, 
+    fromResult,
+    sign = '+',
+    musicOn = false;
 
 // Включаем музыку по нажатию на кнопку музыки, меняем значек на кнопке
-function sound() {
-    countOne++;
-
-    if (countOne%2 == 1) {
-    note = document.getElementById("music").innerHTML = "&#x25B6;"
+function musicOnOffHandler() {
+    if (!musicOn) {
+    note = document.getElementById("music").innerHTML = "&#x25B6;";
     audio = new Audio(); // Создаём новый элемент Audio
     audio.src = '../audio/zvuki_prirodi.mp3'; // Указываем путь к звуку "клика"
     audio.play(); // 3апускаем
+    musicOn = true;
     } else {
         audio.pause();
-        document.getElementById("music").innerHTML = "&#119136;"
+        document.getElementById("music").innerHTML = "&#119136;";
+        musicOn = false;
     }
 }
 
 // Функция добавляет нажатую цифру в результат, следит, чтобы в окне результата
 // не было переполнения, если в окне ноль - удаляет его
-function getNumber() {
+function addNumber() {
 	fromResult = document.getElementById('result').innerHTML;
     if (fromResult === "0") {
         document.getElementById('result').innerHTML = "";
@@ -35,85 +43,85 @@ function getNumber() {
 }
 
 // Нажатие кнопки 1
-function getOne() {
+function pressButtonOne() {
     fromId = document.getElementById('one').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 2
-function getTwo() {
+function pressButtonTwo() {
     fromId = document.getElementById('two').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 3
-function getThree() {
+function pressButtonThree() {
     fromId = document.getElementById('three').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 4
-function getFour() {
+function pressButtonFour() {
     fromId = document.getElementById('four').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 5
-function getFive() {
+function pressButtonFive() {
     fromId = document.getElementById('five').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 6
-function getSix() {
+function pressButtonSix() {
     fromId = document.getElementById('six').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 7
-function getSeven() {
+function pressButtonSeven() {
     fromId = document.getElementById('seven').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 8
-function getEight() {
+function pressButtonEight() {
     fromId = document.getElementById('eight').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 9
-function getNine() {
+function pressButtonNine() {
     fromId = document.getElementById('nine').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки 0
-function getZero() {
+function pressButtonZero() {
     fromId = document.getElementById('zero').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Нажатие кнопки "точка"
-function getPoint() {
+function pressButtonPoint() {
     countThree++;
     if (countThree > 1) {
         alert("Запятая может быть только одна");
         fail;
     }
     fromId = document.getElementById('point').innerHTML;
-    getNumber();
+    addNumber();
 }
 
 // Общая функция для знаков, рассчитывающая число, попадающее в архив + обнуление счетчика запятой
- function getArchiv() {
+ function archivCalculation() {
     if (sign === "+") {
         document.getElementById('archiv').innerHTML = 
         parseFloat(document.getElementById('archiv').innerHTML) + 
         parseFloat(document.getElementById('result').innerHTML);
     }
 
-    if (sign === "-") {
+     if (sign === "-") {
         document.getElementById('archiv').innerHTML = 
         parseFloat(document.getElementById('archiv').innerHTML) - 
         parseFloat(document.getElementById('result').innerHTML);
@@ -140,55 +148,55 @@ function getPoint() {
 }
 
 // Нажатие кнопки "плюс"
-function getPlus() {
-    getArchiv();
+function pressButtonPlus() {
+    archivCalculation();
     sign = "+";
     document.getElementById('result').innerHTML = '+';
 }
 
 // Нажатие кнопки "минус"
-function getMinus() {
-    getArchiv();
+function pressButtonMinus() {
+    archivCalculation();
     sign = "-";
     document.getElementById('result').innerHTML = '-';
 }
 
 // Нажатие кнопки "умножить"
-function getMultiple() { 
-    getArchiv();
+function pressButtonMultiple() { 
+    archivCalculation();
     sign = "*";
     document.getElementById('result').innerHTML = '*';
 }
 
 // Нажатие кнопки "разделить"
-function getDivide() {
-    getArchiv();
+function pressButtonDivide() {
+    archivCalculation();
     sign = "/";
     document.getElementById('result').innerHTML = '/';
 }
 
 // Нажатие кнопки "процент"
-function getPercent() {
-    getArchiv();
+function pressButtonPercent() {
+    archivCalculation();
     sign = "%";
     document.getElementById('result').innerHTML = '%';
 }
 
 // Нажатие кнопки "плюс/минус"
-function getPlusMinus() {
+function pressButtonPlusMinus() {
     num = document.getElementById('result').innerHTML;
 	document.getElementById('result').innerHTML = 0 - num;
 }
 
 // Нажатие кнопки "сброс"
-function getReset() {
+function pressButtonReset() {
     document.getElementById('result').innerHTML = "0";
     document.getElementById('archiv').innerHTML = '0';
 }
 
 // Нажатие кнопки "равно"
-function getEqual() {
-    getArchiv();
+function pressButtonEqual() {
+    archivCalculation();
     document.getElementById('result').innerHTML = document.getElementById('archiv').innerHTML;	
     document.getElementById('archiv').innerHTML = '0';
 }
@@ -204,57 +212,57 @@ function delLastSign() {
 // Обработка событий нажатия кнопок нампада
 document.addEventListener('keydown', function (evt) {
 	if (evt.keyCode === 27) {
-	   getReset();
+        pressButtonReset();
 	};
 	if (evt.keyCode === 13) {
-	   getEqual();
+        pressButtonEqual();
 	};
 	if (evt.keyCode === 8) {
 	   delLastSign();
 	};
 	if ((evt.keyCode === 49) || (evt.keyCode === 97)) {
-	   getOne();
+        pressButtonOne();
 	};
 	if ((evt.keyCode === 50) || (evt.keyCode === 98)) {
-	   getTwo();
+        pressButtonTwo();
 	};
 	if ((evt.keyCode === 51) || (evt.keyCode === 99)) {
-	   getThree();
+        pressButtonThree();
 	};
 	if ((evt.keyCode === 52) || (evt.keyCode === 100)) {
-	   getFour();
+        pressButtonFour();
 	};
 	if ((evt.keyCode === 53) || (evt.keyCode === 101)) {
-	   getFive();
+        pressButtonFive();
 	};
 	if ((evt.keyCode === 54) || (evt.keyCode === 102)) {
-	   getSix();
+        pressButtonSix();
 	};
 	if ((evt.keyCode === 55) || (evt.keyCode === 103)) {
-	   getSeven();
+        pressButtonSeven();
 	};
 	if ((evt.keyCode === 56) || (evt.keyCode === 104)) {
-	   getEight();
+        pressButtonEight();
 	};
 	if ((evt.keyCode === 57) || (evt.keyCode === 105)) {
-	   getNine();
+        pressButtonNine();
 	};
 	if ((evt.keyCode === 48) || (evt.keyCode === 96)) {
-	   getZero();
+        pressButtonZero();
 	};
 	if (evt.keyCode === 107) {
-	   getPlus();
+        pressButtonPlus();
 	};
 	if (evt.keyCode === 109) {
-	   getMinus();
+        pressButtonMinus();
 	};
 	if (evt.keyCode === 106) {
-	   getMultiple();
+        pressButtonMultiple();
 	};
 	if ((evt.keyCode === 111) || (evt.keyCode === 191)) {
-	   getDivide();
+        pressButtonDivide();
     };
     if ((evt.keyCode === 110) || (evt.keyCode === 188) || (evt.keyCode === 190)) {
-        getPoint();
+        pressButtonPoint();
     }
 });
