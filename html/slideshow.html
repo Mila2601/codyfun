@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Slideshow</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/form-style.css" rel="stylesheet" type="text/css">
+		<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	</head>
+	
+	<body>
+	 	
+		<header>
+			<h1 class="verticalMiddle logoText">Слайдер</h1>
+			<p class="intro"><em>Простой слайдер.</em></p>
+		</header>
+			
+		<nav>
+			<ul>
+				<li><a href="../index.html">Главная страница</a></li>
+				<li><a title="интересные факты ни о чем" href="facts.html">Интересные факты</a></li>
+				<li><a title="вы не можете с нами связаться" href="contacts.html">Контакты</a></li>
+				<li><a title="карта расположения коворкинга IHUB" href="address.html">Карта</a></li>
+				<li><a title="задание от Вадима"  id="dMenu" href="challenge.html">Челендж</a>
+					<ul class="dropdown">
+						<li><a href="games.html">Игры</a></li>
+                        <li><a href="list.html">Список покупок</a></li>
+                        <li><a href="calc.html">Калькулятор</a></li>
+                        <li><a href="slideshow.html">Слайдер</a></li>
+					</ul></li>
+				<li><a class="popup--open" title="форма" href="form.html">Заполните форму</a></li>
+				<li><a title="мое резюме" href="CV.html">CV</a></li>
+			</ul>
+        </nav>	
+        
+        <div class="slides">
+            <div class="slide">
+                <span>1/4</span>
+                <img src="../images/slideshow/slide1.jpg">
+                <p><mark>Осень</mark></p>
+            </div>
+
+            <div class="slide">
+                <span>2/4</span>
+                <img src="../images/slideshow/slide2.jpg">
+                <p><mark>Хвоя</mark></p>
+                </div>
+
+            <div class="slide">
+                <span>3/4</span>
+                <img src="../images/slideshow/slide3.jpg">
+                <p><mark>Горы</mark></p>
+            </div>
+
+            <div class="slide">
+                <span>4/4</span>
+                <img src="../images/slideshow/slide4.jpg">
+                <p><mark>Бабочка</mark></p>
+            </div>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)">.</span>
+
+            <span class="dot" onclick="currentSlide(2)">.</span>
+
+            <span class="dot" onclick="currentSlide(3)">.</span>
+
+            <span class="dot" onclick="currentSlide(4)">.</span>
+        </div>
+
+        <script src="../js/slideshow.js"></script>
+    </body>
+</html>

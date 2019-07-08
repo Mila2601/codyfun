@@ -13,9 +13,9 @@ var countOne = 0,
 function musicOnOffHandler() {
     if (!musicOn) {
     note = document.getElementById("music").innerHTML = "&#x25B6;";
-    audio = new Audio(); // Создаём новый элемент Audio
-    audio.src = '../audio/zvuki_prirodi.mp3'; // Указываем путь к звуку "клика"
-    audio.play(); // 3апускаем
+    audio = new Audio(); 
+    audio.src = '../audio/zvuki_prirodi.mp3'; 
+    audio.play(); 
     musicOn = true;
     } else {
         audio.pause();
@@ -24,8 +24,9 @@ function musicOnOffHandler() {
     }
 }
 
-// Функция добавляет нажатую цифру в результат, следит, чтобы в окне результата
-// не было переполнения, если в окне ноль - удаляет его
+// Функция добавляет нажатую цифру в результат, следит, 
+//чтобы в окне результата не было переполнения, если в окне ноль 
+//- удаляет его
 function addNumber() {
 	fromResult = document.getElementById('result').innerHTML;
     if (fromResult === "0") {
@@ -113,14 +114,15 @@ function pressButtonPoint() {
     addNumber();
 }
 
-// Общая функция для знаков, рассчитывающая число, попадающее в архив + обнуление счетчика запятой
+// Общая функция для знаков, рассчитывающая число, 
+//попадающее в архив + обнуление счетчика запятой
  function archivCalculation() {
     number1 = document.getElementById('result').innerHTML;
     number2 = document.getElementById('archiv').innerHTML;
         
     if (sign === "+") {
-        document.getElementById('archiv').innerHTML = parseFloat(number2) + 
-        parseFloat(number1);        
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) + parseFloat(number1);        
     }
 
     if (sign === "-") {
@@ -187,12 +189,14 @@ function pressButtonPlusMinus() {
 function pressButtonReset() {
     document.getElementById('result').innerHTML = "0";
     document.getElementById('archiv').innerHTML = '0';
+    sign = "+";
 }
 
 // Нажатие кнопки "равно"
 function pressButtonEqual() {
     archivCalculation();
-    document.getElementById('result').innerHTML = document.getElementById('archiv').innerHTML;	
+    document.getElementById('result').innerHTML = 
+    document.getElementById('archiv').innerHTML;	
     document.getElementById('archiv').innerHTML = "0";
     sign = "+";
 }
@@ -258,7 +262,8 @@ document.addEventListener('keydown', function (evt) {
 	if ((evt.keyCode === 111) || (evt.keyCode === 191)) {
         pressButtonDivide();
     };
-    if ((evt.keyCode === 110) || (evt.keyCode === 188) || (evt.keyCode === 190)) {
+    if ((evt.keyCode === 110) || (evt.keyCode === 188) || 
+    (evt.keyCode === 190)) {
         pressButtonPoint();
     }
 });
