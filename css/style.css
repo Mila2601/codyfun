@@ -104,7 +104,8 @@ nav ul li:active {
 
 .dropdown {
 	position: absolute;
-	top: 40px;
+	/*top: 40px;*/
+	z-index: 2;
 	display: none;
 	width: auto;
 	background-color: #000;
@@ -256,7 +257,7 @@ section {
 	width: 50%;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:600px) {
 	.column 
 	{
 		width: 100%;
@@ -1179,12 +1180,14 @@ display: none;
 	margin: 5px;
 	display: inline;
 	font-size: 150px;
+	color: #4a4a4a;
 	-webkit-text-stroke: 1px rgba(0,0,0,0.8);
-  	-webkit-text-fill-color: white;
+	-webkit-text-fill-color: white;
 }
 
 .dots .active {
 	-webkit-text-fill-color: black;
+	color: #9bfc88;
 }
 
 

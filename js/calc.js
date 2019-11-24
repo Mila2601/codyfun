@@ -1,11 +1,11 @@
-var countOne = 0,
-    countThree = 0,
-    fromId = 0,
-    audio,
+var audio,
     note,
     num,
     fromLength, 
     fromResult,
+    counterFirst = 0,
+    counterThird = 0,
+    fromId = 0,
     sign = '+',
     musicOn = false;
 
@@ -34,9 +34,9 @@ function addNumber() {
     };
 	
     fromLength = fromResult.length;
-    countTwo = document.getElementById("result").innerHTML;
-    countTwo = countTwo.length;
-    if (countTwo > 15) {
+    counterSecond = document.getElementById("result").innerHTML;
+    counterSecond = counterSecond.length;
+    if (counterSecond > 15) {
         fail;
     };
     document.getElementById('result').innerHTML += fromId; 
@@ -105,8 +105,8 @@ function pressButtonZero() {
 
 // Нажатие кнопки "точка"
 function pressButtonPoint() {
-    countThree++;
-    if (countThree > 1) {
+    counterThird++;
+    if (counterThird > 1) {
         alert("Запятая может быть только одна");
         fail;
     }
@@ -146,7 +146,7 @@ function pressButtonPoint() {
         100 * parseFloat(number1);
     }
     document.getElementById('result').innerHTML = "";
-    countThree = 0;
+    counterThird = 0;
 }
 
 // Нажатие кнопки "плюс"

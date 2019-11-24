@@ -5,6 +5,7 @@ var slideIndex = 1;
 
 function currentSlide(n) {
     slideIndex = n;
+    clearInterval(showSlides);
     showSlides();
 }
 
@@ -25,5 +26,5 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].className += ' active';
     slideIndex++;
-    setTimeout(showSlides, 3000);
 }
+setInterval(showSlides, 3000);
