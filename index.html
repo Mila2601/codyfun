@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title> Codifun	</title>
+		<title> Lovely Site	</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<meta name="viewport" content="width='divice-width', initial-scale=1.0">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	</head>
@@ -12,66 +12,68 @@
 	 <div> 
 		<header>
 			<div class="logo-bg">
-			<h1 class="verticalMiddle logoText"> Codifun Inspire Me &#9829</h1>
+			<h1 class="verticalMiddle logoText"> Lovely Site &#9829;</h1>
 			</div>
-			<p><em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+			<p class='explanation'><em>Первая созданная страница. Работа с заголовками, изображениями, видео, аудио. <br>
+				Трехколоночная разбивка создана с использованием свойства CSS display: column. <br>
+				Внешний вид всплывающей формы: вариант 1. 
+			</em></p>
 		</header>
 				  
 		<nav>
 			<ul>
 				<li><a href="index.html">Главная страница</a></li>
-				<li><a title="интересные факты ни о чем" href="html/facts.html">Интересные факты</a></li>
-				<li><a title="вы не можете с нами связаться" href="html/contacts.html">Контакты</a></li>
+				<li><a title="интересные факты" href="html/facts.html">Интересные факты</a></li>
+				<li><a title="свяжитесь с нами" href="html/contacts.html">Контакты</a></li>
 				<li><a title="карта расположения коворкинга IHUB" href="html/address.html">Карта</a></li>
 				<li><a title="задание от Вадима" href="html/challenge.html">Челендж</a>
 					<ul class="dropdown">
-						<li><a href="html/games.html">Игры</a></li>
-						<li><a href="html/list.html">Список покупок</a></li>
-						<li><a target="_blank" href="html/calc.html">Калькулятор</a></li>
-                        <li><a href="html/slideshow.html">Слайдер</a></li>
+						<li><a title="игры" href="html/games.html">Игры</a></li>
+						<li><a title="список покупок" href="html/list.html">Список покупок</a></li>
+						<li><a title="Калькулятор" target="_blank" href="html/calc.html">Калькулятор</a></li>
+                        <li><a title="простой слайдер" href="html/slideshow.html">Слайдер</a></li>
 					</ul></li>
-				<li><a class="popup--open" title="форма" href="html/form.html">Заполните форму</a></li>
+				<li><a class="popup--open" title="всплывающая форма" href="html/form.html">Заполните форму</a></li>
 				<li><a title="мое резюме" href="html/CV.html">CV</a></li>
 			</ul>
 		</nav>		
 		
 		<section>
 			<div class="row">
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 1</h2>
+				<article class="column">
+					<h2 class="article-title">Статья &#8470 1</h2>
 					<img class="round" alt="значек блокнот с ручкой бирюзового цвета" src="images/articol-1.png">
 					<h6> Author: First name Last Name</h6>
 					<p><span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</span></p>
 					<audio src="audio/audio.mp3" controls><p>Аудио не воспроизводится вашим браузером</p></audio>
-				</div>
+					</article>
 				
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 2</h2>
+				<article class="column">
+					<h2 class="article-title">Статья &#8470 2</h2>
 					<img class="round"  alt="значек блокнот с ручкой синего цвета" src="images/articol-2.png">
 					<h6> Author: First name Last Name</h6>
 					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
 					<video src="video/video.mp4" poster="images/articol-2.png" controls><p>Видео не воспроизводится вашим браузером</p></video>
-				</div>
+				</article>
 
-				<div class="column">
-					<h2 class="article-title">Заголовок Статья &#8470 3</h2>
+				<article class="column">
+					<h2 class="article-title">Статья &#8470 3</h2>
 					<img class="round"  alt="значек блокнот с ручкой зеленого цвета" src="images/articol-3.png">
 					<h6> Author: First name Last Name</h6>
 					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
 					Sed porttitor tortor vitae ligula convallis, eu dictum sem rutrum. Nunc massa ante, tincidunt sed risus non, convallis aliquam mauris.</p>
 					<video src="video/video.mp4" autoplay loop muted><p>Видео не воспроизводится вашим браузером</p></video>
-				</div>
+				</article>
 			</div>
 		</section>
-		<div class="line"></div>
-		
+		<div class="line"></div>		
 		<footer>
 			<h3 id="demo"></h3>	
-		</footer>	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
-		
+		</footer>			
 	  </div>
+	  
 	  <form action="#" method="post" class="popup">
 		<div class="popup-content">
 			<h1 class="form-title">Форма с личными данными</h1>

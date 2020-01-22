@@ -44,6 +44,9 @@ var cardsData = [
   }
 ];
 
+var list = document.querySelector('ul');
+
+//создаем элемент
 var makeCardElement = function (nameTag, nameClass, text) {
   var element = document.createElement(nameTag);
   element.classList.add(nameClass);
@@ -54,6 +57,12 @@ var makeCardElement = function (nameTag, nameClass, text) {
   return element
 }
 
+/*создаем карточку товара с последовательностью элементов: 
+  <li class="good"></li>
+  <h2 class="good__description">product.text</h2>
+  <img class="good__image" src=product.imgUrl alt=product.text>
+  <p class="good__price">product.price + ' \u20B4/л'</p>  
+  И определяем оформление в зависимости хит ли это и доступен ли товар на складе*/
 var makeCard = function (product) {
   var card = makeCardElement('li', 'good');
   
@@ -72,7 +81,7 @@ var makeCard = function (product) {
     card.classList.add('good--hit');
     var specialOffer = makeCardElement('p', 'good__special-offer', product.specialOffer);
     card.appendChild(specialOffer);
-    }
+  }
     
   var availabilityClass = 'good--available';
   if (!product.inStock) {
@@ -82,11 +91,11 @@ var makeCard = function (product) {
   return card
 }
 
-var list = document.querySelector('ul');
-
+/* Создаем ненумерованный список карточек, перебирая данные из массива объектов 
+и создавая карточку для каждого объекта */
 var renderCards = function (cardsData) {
   
-  for ( var i = 0; i < cardsData.length; i++) {
+  for (var i = 0; i < cardsData.length; i++) {
     var goodCard = makeCard(cardsData[i]);
     list.appendChild(goodCard);
   }
@@ -95,3 +104,8 @@ var renderCards = function (cardsData) {
 
 renderCards(cardsData);
 
+document.addEventListener("click", displayPopupCard);
+
+var displayPopupCard = function () {
+  alert('dfgd');
+}

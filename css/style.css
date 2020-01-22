@@ -16,7 +16,8 @@ p {
 
 h2, h3,
 img + h6, 
-h6 + p {
+h6 + p, 
+.explanation {
 	text-align: center;
 }
 
@@ -246,7 +247,7 @@ section {
 	width: 100%;
 	height: 300px;
 	background: #b3ee91 url('../images/derevo.png') no-repeat fixed center 80%;
-	background-size: contain;
+	background-size: 20%;
 }
 
 .uno-column {
@@ -462,9 +463,7 @@ form span {
 .popup-content {
   position: relative;
   width: 680px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
   padding: 30px 40px 35px;
   background-color: #ffffff;
   box-shadow: -1px 5px 12px 0 rgba(89, 90, 90, 0.3);
@@ -478,7 +477,7 @@ form span {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -666,12 +665,6 @@ main {
   list-style: none;
 }
 
-@media screen and (max-width: 600px) {
-	 .goods {
-		 width: 100%;
-	 }
-}
-
 .good {
   position: relative;
   display: flex;
@@ -731,6 +724,18 @@ main {
 
   background-image: url("../images/hit.svg");
   background-repeat: no-repeat;
+}
+
+.good-containe:hover::after {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 80px 50px;
+	content: attr(containe);
+	background: rgba(94, 72, 72, 0.9);
 }
 
 .good--unavailable {
@@ -942,12 +947,6 @@ display: none;
 .cv {
 	background-color: white;
 	font-size: 1.2em;
-}
-
-.intro {
-	width: 80%;
-	margin: auto;
-	text-align: center;
 }
 
 .skills {
@@ -1190,9 +1189,16 @@ display: none;
 	color: #9bfc88;
 }
 
+.domain::before {
+    content: "\0040";    /* Unicode character for @ symbol */
+}
+
 
 
 @media screen and (max-width: 600px) {
+	main {
+		padding: 0;
+	}
 
 	.slides {
 		width: 330px;
@@ -1257,11 +1263,18 @@ display: none;
 		position: relative;
 	}
 
-.btn-game {
-    top: 390px;
-    width: 260px;
-}
+	.btn-game {
+		top: 390px;
+		width: 260px;
+	}
 
-#nmbr, #price, #product {
-    width: 100%;
-}
+	#nmbr, #price, #product {
+		width: 100%;
+	}
+
+	.calc-field {
+		width: 360px;
+		height: 530px;
+		margin: 10px auto;
+		padding: 20px;
+	}
