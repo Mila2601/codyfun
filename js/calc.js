@@ -1,172 +1,172 @@
 var audio,
     note,
-    num,
-    fromLength, 
-    fromResult,
+    num, 
+    result,
     counterFirst = 0,
     counterThird = 0,
     fromId = 0,
     sign = '+',
-    musicOn = false;
-    one = document.querySelector("button#one");
-    two = document.querySelector("button#two");
-    three = document.querySelector("button#three");
-    four = document.querySelector("button#four");
-    five = document.querySelector("button#five");
-    six = document.querySelector("button#six");
-    seven = document.querySelector("button#seven");
-    eight = document.querySelector("button#eight");
-    nine = document.querySelector("button#nine");
-    zero = document.querySelector("button#zero");
-    plus = document.querySelector("button#plus");
-    minus = document.querySelector("button#minus");
-    multiple = document.querySelector("button#multiple");
-    divide = document.querySelector("button#divide");
-    percent = document.querySelector("button#percent");
-    music = document.querySelector("button#music");
-    plusMinus = document.querySelector("button#plus-minus");
-    delLastSign = document.querySelector("button#del-last-sign");
-    c = document.querySelector("button#C");
-    equal = document.querySelector("button#equal");
+    signOfNumber = "+",
+    musicOn = false,
+    one = document.querySelector("button#one"),
+    two = document.querySelector("button#two"),
+    three = document.querySelector("button#three"),
+    four = document.querySelector("button#four"),
+    five = document.querySelector("button#five"),
+    six = document.querySelector("button#six"),
+    seven = document.querySelector("button#seven"),
+    eight = document.querySelector("button#eight"),
+    nine = document.querySelector("button#nine"),
+    zero = document.querySelector("button#zero"),
+    plus = document.querySelector("button#plus"),
+    minus = document.querySelector("button#minus"),
+    multiply = document.querySelector("button#multiply"),
+    divide = document.querySelector("button#divide"),
+    percent = document.querySelector("button#percent"),
+    music = document.querySelector("button#music"),
+    plusMinus = document.querySelector("button#plus-minus"),
+    delLastSign = document.querySelector("button#del-last-sign"),
+    c = document.querySelector("button#C"),
+    equal = document.querySelector("button#equal"),
     point = document.querySelector("button#point");
 
 // Функция воспроизведения музыки
 function musicOnOffHandler() {
     if (!musicOn) {
-    note = document.getElementById("music").innerHTML = "&#x25B6;";
-    audio = new Audio(); 
-    audio.src = '../audio/zvuki_prirodi.mp3'; 
-    audio.play(); 
-    musicOn = true;
+        note = document.getElementById("music").innerHTML = "&#x25B6;";
+        audio = new Audio(); 
+        audio.src = '../audio/zvuki_prirodi.mp3'; 
+        audio.play(); 
+        musicOn = true;
     } else {
         audio.pause();
         document.getElementById("music").innerHTML = "&#119136;";
         musicOn = false;
-    }
+    };
 };
 
 // Функция добавляет нажатую цифру в результат, следит, 
 //чтобы в окне результата не было переполнения, если в окне ноль 
 //- удаляет его
 function addNumber() {
-	fromResult = document.getElementById('result').innerHTML;
-    if (fromResult === "0") {
+	result = document.getElementById('result').innerHTML;
+    if (result === "0") {
         document.getElementById('result').innerHTML = "";
     };
 	
-    fromLength = fromResult.length;
-    counterSecond = document.getElementById("result").innerHTML;
-    counterSecond = counterSecond.length;
+    var counterSecond = result.length;
     if (counterSecond > 15) {
         fail;
     };
+
     document.getElementById('result').innerHTML += fromId; 
     parseFloat(document.getElementById('result').innerHTML);  
 };
 
+// Общая функция для знаков, рассчитывающая число, 
+//попадающее в архив + обнуление счетчика запятой
+function archivCalculation() {
+    number1 = document.getElementById('result').innerHTML;
+    number2 = document.getElementById('archiv').innerHTML; 
+
+    if (sign === "+") {
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) + parseFloat(number1); 
+    };
+
+    if (sign === "-") {
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) - parseFloat(number1);    
+    };
+
+    if (sign === "*") {
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) * parseFloat(number1);
+    };
+
+    if (sign === "/") {
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) / parseFloat(number1);
+    };
+
+    if (sign === "%") {
+        document.getElementById('archiv').innerHTML = 
+        parseFloat(number2) / 100 * parseFloat(number1);
+    };
+    
+    document.getElementById('result').innerHTML = ""; 
+    counterThird = 0;
+};
+
 // Функция работы кнопки "один"
 function pressButtonOne() {
-    fromId = document.getElementById('one').innerHTML;
+    fromId = one.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "два"
 function pressButtonTwo() {
-    fromId = document.getElementById('two').innerHTML;
+    fromId = two.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "три"
 function pressButtonThree() {
-    fromId = document.getElementById('three').innerHTML;
+    fromId = three.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "четыре"
 function pressButtonFour() {
-    fromId = document.getElementById('four').innerHTML;
+    fromId = four.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "пять"
 function pressButtonFive() {
-    fromId = document.getElementById('five').innerHTML;
+    fromId = five.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "шесть"
 function pressButtonSix() {
-    fromId = document.getElementById('six').innerHTML;
+    fromId = six.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "семь"
 function pressButtonSeven() {
-    fromId = document.getElementById('seven').innerHTML;
+    fromId = seven.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "восемь"
 function pressButtonEight() {
-    fromId = document.getElementById('eight').innerHTML;
+    fromId = eight.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "девять"
 function pressButtonNine() {
-    fromId = document.getElementById('nine').innerHTML;
+    fromId = nine.innerHTML;
     addNumber();
 };
 
 // Функция работы кнопки "ноль"
 function pressButtonZero() {
-    fromId = document.getElementById('zero').innerHTML;
+    fromId = zero.innerHTML;
     addNumber();
 };
 
-// Функция работы кнопки ""
+// Функция работы кнопки "точка"
 function pressButtonPoint() {
     counterThird++;
     if (counterThird > 1) {
         alert("Запятая может быть только одна");
         fail;
     }
-    fromId = document.getElementById('point').innerHTML;
+    fromId = point.innerHTML;
     addNumber();
-};
-
-// Общая функция для знаков, рассчитывающая число, 
-//попадающее в архив + обнуление счетчика запятой
- function archivCalculation() {
-    number1 = document.getElementById('result').innerHTML;
-    number2 = document.getElementById('archiv').innerHTML;
-        
-    if (sign === "+") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(number2) + parseFloat(number1);        
-    }
-
-    if (sign === "-") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(number2) - parseFloat(number1);
-    }
-
-    if (sign === "*") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(number2) * parseFloat(number1);
-    }
-
-    if (sign === "/") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(number2) / parseFloat(number1);
-    }
-
-    if (sign === "%") {
-        document.getElementById('archiv').innerHTML = 
-        parseFloat(number2) / 100 * parseFloat(number1);
-    }
-    document.getElementById('result').innerHTML = "";
-    counterThird = 0;
 };
 
 // Функция работы кнопки "плюс"
@@ -177,12 +177,16 @@ function pressButtonPlus() {
 
 // Функция работы кнопки "минус"
 function pressButtonMinus() {
+    /*if (document.getElementById('result').innerHTML == "0" && document.getElementById('archiv').innerHTML == "0") {
+        signOfNumber = "-";
+        break
+    };*/
     archivCalculation();
     sign = "-";
 };
 
 // Функция работы кнопки "умножить"
-function pressButtonMultiple() { 
+function pressButtonMultiply() { 
     archivCalculation();
     sign = "*";
 };
@@ -200,20 +204,23 @@ function pressButtonPercent() {
     sign = "%";
     archivCalculation();
     sign = previousSign;
-    document.getElementById('result').innerHTML = document.getElementById('archiv').innerHTML;
+    document.getElementById('result').innerHTML = 
+    document.getElementById('archiv').innerHTML;
     document.getElementById('archiv').innerHTML = previousArchive;
 };
 
 // Функция работы кнопки "плюс/минус"
 function pressButtonPlusMinus() {
     num = document.getElementById('result').innerHTML;
-	document.getElementById('result').innerHTML = 0 - num;
+	document.getElementById('result').innerHTML = (-1) * parseFloat(num);
 };
 
 // Функция работы кнопки "сброс"
 function pressButtonReset() {
-    document.getElementById('result').innerHTML = "0";
+    document.getElementById('result').innerHTML = '0';
     document.getElementById('archiv').innerHTML = '0';
+    counterFirst = 0;
+    counterThird = 0;
     sign = "+";
 };
 
@@ -226,7 +233,7 @@ function pressButtonEqual() {
     sign = "+";
 };
 
-// Включаем музыку по нажатию на кнопку музыки, меняем значек на кнопке
+// Включение музыки
 music.addEventListener('click', musicOnOffHandler);
 
 // Нажатие кнопки 1
@@ -269,7 +276,7 @@ plus.addEventListener('click', pressButtonPlus);
 minus.addEventListener('click', pressButtonMinus);
 
 // Нажатие кнопки "умножить"
-multiple.addEventListener('click', pressButtonMultiple);
+multiply.addEventListener('click', pressButtonMultiply);
 
 // Нажатие кнопки "разделить"
 divide.addEventListener('click', pressButtonDivide);
@@ -341,7 +348,7 @@ document.addEventListener('keydown', function (evt) {
         pressButtonMinus();
 	};
 	if (evt.keyCode === 106) {
-        pressButtonMultiple();
+        pressButtonMultiply();
 	};
 	if ((evt.keyCode === 111) || (evt.keyCode === 191)) {
         pressButtonDivide();
@@ -349,5 +356,5 @@ document.addEventListener('keydown', function (evt) {
     if ((evt.keyCode === 110) || (evt.keyCode === 188) || 
     (evt.keyCode === 190)) {
         pressButtonPoint();
-    }
+    };
 });
